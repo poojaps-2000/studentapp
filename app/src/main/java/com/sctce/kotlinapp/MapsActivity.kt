@@ -54,6 +54,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
                 val intent = intent
                 val bus = intent.getStringExtra("id")
+
                 val locationlogging = dataSnapshot.child(bus.toString()).getValue(LocationLogging::class.java)
                 val driverLat=locationlogging?.Latitude
                 val driverLong=locationlogging?.Longitude
@@ -66,7 +67,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                     val markerOptions = MarkerOptions().position(driverLoc).title("Bus").icon(
                         BitmapDescriptorFactory.fromResource(R.drawable.markerm)) //markerm.png is the bus icon
                     mMap.addMarker(markerOptions)
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(driverLoc, 15f))
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(driverLoc, 20.0f))
                     //Zoom level - 1: World, 5: Landmass/continent, 10: City, 15: Streets and 20: Buildings
 
                     //Toast.makeText(applicationContext, "Locations accessed from the database", Toast.LENGTH_LONG).show()
@@ -79,11 +80,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        //adding point for college
-
-        //val college = LatLng(8.470814, 76.979630)
-        //mMap.addMarker(MarkerOptions().position(college).title("SCT"))
-
         Toast.makeText(applicationContext, "Safe travel!", Toast.LENGTH_LONG).show()
 
 
