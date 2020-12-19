@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="328dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/selectbus" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="50dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="128dp"
+        android:backgroundTint="#FFE60A"
+        android:clickable="false"
+        android:fontFamily="@font/proximanovablack"
+        android:text="B"
+        android:textColor="#5D3500"
+        android:textSize="23sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/busb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/busb"
+        app:layout_constraintTop_toTopOf="@+id/busb"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/c2"
+        android:layout_width="50dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="128dp"
+        android:backgroundTint="#FFE60A"
+        android:clickable="false"
+        android:fontFamily="@font/proximanovablack"
+        android:text="C"
+        android:textColor="#5D3500"
+        android:textSize="23sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/busc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/busc"
+        app:layout_constraintTop_toTopOf="@+id/busc"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/busa"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="303dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/proximanovablack"
+        android:text="Bus"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7" />
+
+    <Button
+        android:id="@+id/busb"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/proximanovablack"
+        android:text="Bus"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busa" />
+
+    <Button
+        android:id="@+id/busc"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginBottom="37dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/proximanovablack"
+        android:text="Bus"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.433"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busb"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="247dp"
+        android:layout_height="12dp"
+        android:layout_marginTop="436dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/line" />
+
+    <Button
+        android:id="@+id/abtus"
+        android:layout_width="102dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="378dp"
+
+        android:background="@drawable/abtbutton"
+        android:text="About"
+        android:textColor="#754C24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.788" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="280dp"
+        android:layout_height="194dp"
+        android:layout_marginEnd="240dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.998"
+        app:srcCompat="@drawable/sctlogo" />
+
+    <Button
+        android:id="@+id/a2"
+        android:layout_width="50dp"
+        android:layout_height="59dp"
+        android:layout_marginEnd="128dp"
+        android:backgroundTint="#FFE60A"
+        android:clickable="false"
+        android:fontFamily="@font/proximanovablack"
+        android:text="A"
+        android:textColor="#5D3500"
+        android:textSize="19sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/busa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/busa"
+        app:layout_constraintTop_toTopOf="@+id/busa"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/secpg" />
+
+    <!--    <Button-->
+<!--        android:id="@+id/busa"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:text="Bus A"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/busb"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/imageView7"-->
+<!--        app:layout_constraintVertical_bias="0.814" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/busc"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="248dp"-->
+<!--        android:text="Bus C"-->
+
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/busb"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="20dp"-->
+<!--        android:text="Bus B"-->
+<!--        android:textColor="@color/white"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/busc"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.498"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,11 +1,12 @@
 package com.sctce.kotlinapp
 
-import androidx.appcompat.app.AppCompatActivity
+import android.location.Address
+import android.location.Geocoder
 import android.os.Bundle
-import android.os.Parcel
-import android.os.Parcelable
+import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
-
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -22,7 +23,7 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
-
+    private var i=0
     private lateinit var mMap: GoogleMap
     private lateinit var marker: Marker
 
@@ -33,7 +34,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         setContentView(R.layout.activity_maps)
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         val mapFragment = supportFragmentManager
-            .findFragmentById(R.id.map) as SupportMapFragment
+                .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
 
         databaseRef = Firebase.database.reference
@@ -41,37 +42,41 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     }
 
-    val logListener = object : ValueEventListener {
+    private val logListener = object : ValueEventListener {
         override fun onCancelled(error: DatabaseError) {
-            Toast.makeText(applicationContext, "Could not read from database", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "Could not read from database", Toast.LENGTH_LONG)
+                    .show()
         }
-
-        //     @SuppressLint("LongLogTag")
         override fun onDataChange(dataSnapshot: DataSnapshot) {
+
             if (dataSnapshot.exists()) {
 
                 mMap.clear() //to remove prev marker after loc change
 
                 val intent = intent
                 val bus = intent.getStringExtra("id")
+                val seatsCount: TextView = findViewById(R.id.bus_seats)
 
-                val locationlogging = dataSnapshot.child(bus.toString()).getValue(LocationLogging::class.java)
-                val driverLat=locationlogging?.Latitude
-                val driverLong=locationlogging?.Longitude
-                //Log.d("Latitude of driver", driverLat.toString())
-                //    Log.d("Longitude read from database", driverLong.toString()).
-
+                val locationLogging = dataSnapshot.child(bus.toString()).getValue(LocationLogging::class.java)
+                val driverLat=locationLogging?.Latitude
+                val driverLong=locationLogging?.Longitude
+                    if((locationLogging?.Seats).toString()=="true")
+                    {
+                        seatsCount.text = "SEATS ARE FULL"
+                    }
+                    else{
+                        seatsCount.text = "SEATS ARE AVAILABLE"
+                    } //                }
                 if (driverLat !=null  && driverLong != null) {
                     val driverLoc = LatLng(driverLat, driverLong)
+                    val markerOptions = MarkerOptions().position(driverLoc).title(bus.toString()).icon(
+                            BitmapDescriptorFactory.fromResource(R.drawable.markerm)
+                    )
+                    //markerm.png is the bus icon
 
-                    val markerOptions = MarkerOptions().position(driverLoc).title("Bus").icon(
-                        BitmapDescriptorFactory.fromResource(R.drawable.markerm)) //markerm.png is the bus icon
                     mMap.addMarker(markerOptions)
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(driverLoc, 20.0f))
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(driverLoc, 16.5f))
                     //Zoom level - 1: World, 5: Landmass/continent, 10: City, 15: Streets and 20: Buildings
-
-                    //Toast.makeText(applicationContext, "Locations accessed from the database", Toast.LENGTH_LONG).show()
-
 
                 }
             }
@@ -80,10 +85,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     override fun onMapReady(googleMap: GoogleMap) {
         mMap = googleMap
-        Toast.makeText(applicationContext, "Safe travel!", Toast.LENGTH_LONG).show()
-
-
-
     }
 
 }

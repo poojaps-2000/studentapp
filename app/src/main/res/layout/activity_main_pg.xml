@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFFFF"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/abtus"
+        android:layout_width="95dp"
+        android:layout_height="37dp"
+        android:layout_marginTop="378dp"
+
+        android:background="@drawable/abtbutton"
+        android:text="About"
+        android:textColor="#754C24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.843"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.285" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="298dp"
+        android:layout_height="36dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/busa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/selectbus" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="224dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="436dp"
+        android:layout_marginBottom="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.882"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="270dp"
+        android:layout_height="149dp"
+        android:layout_marginEnd="368dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.993"
+        app:srcCompat="@drawable/sctlogo" />
+
+    <Button
+        android:id="@+id/c2"
+        android:layout_width="53dp"
+        android:layout_height="58dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#FFE60A"
+        android:clickable="false"
+        android:fontFamily="@font/proximanovablack"
+        android:text="C"
+        android:textColor="#5D3500"
+        android:textSize="23sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/busc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="@+id/busc"
+        app:layout_constraintTop_toTopOf="@+id/busc" />
+
+    <Button
+        android:id="@+id/b2"
+        android:layout_width="50dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#FFE60A"
+        android:clickable="false"
+        android:fontFamily="@font/proximanovablack"
+        android:text="B"
+        android:textColor="#5D3500"
+        android:textSize="23sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/busc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/busb"
+        app:layout_constraintTop_toTopOf="@+id/busb"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/busb"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/proximanovablack"
+        android:text="Bus"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busa" />
+
+    <Button
+        android:id="@+id/a2"
+        android:layout_width="50dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginEnd="244dp"
+        android:layout_marginBottom="1dp"
+        android:backgroundTint="#FFE60A"
+        android:clickable="false"
+        android:fontFamily="@font/proximanovablack"
+        android:text="A"
+        android:textColor="#5D3500"
+        android:textSize="23sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/busa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/busa"
+        app:layout_constraintTop_toTopOf="@+id/busa" />
+
+    <Button
+        android:id="@+id/busc"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="37dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/proximanovablack"
+        android:text="Bus"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/busb"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/busa"
+        android:layout_width="99dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="@color/green"
+        android:fontFamily="@font/proximanovablack"
+        android:text="Bus"
+        android:textColor="@color/white"
+        android:textSize="19sp"
+        app:cornerRadius="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/busb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.413"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="109dp"
+        android:layout_marginBottom="84dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/secpg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
