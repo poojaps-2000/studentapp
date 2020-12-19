@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.KotlinApp">
-        <activity android:name=".AboutPg"></activity>
+        <activity android:name=".AboutPg" />
         <activity android:name=".HomePg">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
