@@ -23,7 +23,6 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
-    private var i=0
     private lateinit var mMap: GoogleMap
     private lateinit var marker: Marker
 
@@ -60,13 +59,15 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
                 val locationLogging = dataSnapshot.child(bus.toString()).getValue(LocationLogging::class.java)
                 val driverLat=locationLogging?.Latitude
                 val driverLong=locationLogging?.Longitude
+
                     if((locationLogging?.Seats).toString()=="true")
                     {
                         seatsCount.text = "SEATS ARE FULL"
                     }
                     else{
                         seatsCount.text = "SEATS ARE AVAILABLE"
-                    } //                }
+                    }
+
                 if (driverLat !=null  && driverLong != null) {
                     val driverLoc = LatLng(driverLat, driverLong)
                     val markerOptions = MarkerOptions().position(driverLoc).title(bus.toString()).icon(
